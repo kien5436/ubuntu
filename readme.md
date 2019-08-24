@@ -67,6 +67,18 @@ EOL
 sudo apt install copyq
 ```
 
+9. Hide dash X
+Hide the ugly dash of built-in gnome
+```
+wget https://extensions.gnome.org/extension-data/hide-dash%40xenatt.github.com.v8.shell-extension.zip -P /tmp/
+unzip /tmp/hide-dash@xenatt.github.com.v8.shell-extension.zip -d ~/.local/share/gnome-shell/extensions/hide-dash@xenatt.github.com # directory name is the uuid in metadata.json file
+```
+Press `Alt+F2` and enter `r` to restart GNOME Shell
+
+10. LAMP stack
+[DigitalOcean guide](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04)
+[phpMyAdmin](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04)
+
 ##### Automatically mount a partition
 ```
 sudo blkid # get partitions's UUID
