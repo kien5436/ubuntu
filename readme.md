@@ -2,7 +2,7 @@
 
 ##### Uninstall
 ```
-sudo apt purge --auto-remove aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy
+sudo apt purge --remove -y aisleriot gnome-sudoku mahjongg ace-of-penguins gnomine gbrainy
 # remove amazon
 sudo rm /usr/share/applications/ubuntu-amazon-default.desktop /usr/share/unity-webapps/userscripts/unity-webapps-amazon/Amazon.user.js /usr/share/unity-webapps/userscripts/unity-webapps-amazon/manifest.json
 ```
@@ -10,12 +10,12 @@ sudo rm /usr/share/applications/ubuntu-amazon-default.desktop /usr/share/unity-w
 ##### Install
 1. git
 ```
-sudo apt install git
+sudo apt install -y git
 ```
 
 2. curl
 ```
-sudo apt install curl
+sudo apt install -y curl
 ```
 
 3. Node.js
@@ -34,14 +34,14 @@ Follow this page if failed: [https://code.visualstudio.com/docs/setup/linux](htt
 
 5. fcitx-unikey
 ```
-sudo apt-get install fcitx-unikey
+sudo apt-get install -y fcitx-unikey
 im-config -n fcitx
 ```
 Restart computer to fcitx work. Add unikey into config and double click on it to choose kinds of typing
 
 6. Google Chrome
 ```
-curl --ouput /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+curl --output /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
 sudo dpkg -i /tmp/chrome.deb
 ```
 
@@ -64,11 +64,10 @@ EOL
 
 8. Copyq
 ```
-sudo apt install copyq
+sudo apt install -y copyq
 ```
 
-9. Hide dash X
-Hide the ugly dash of built-in gnome
+9. Hide dash X: Hide the ugly dash of built-in gnome
 ```
 wget https://extensions.gnome.org/extension-data/hide-dash%40xenatt.github.com.v8.shell-extension.zip -P /tmp/
 unzip /tmp/hide-dash@xenatt.github.com.v8.shell-extension.zip -d ~/.local/share/gnome-shell/extensions/hide-dash@xenatt.github.com # directory name is the uuid in metadata.json file
@@ -76,7 +75,9 @@ unzip /tmp/hide-dash@xenatt.github.com.v8.shell-extension.zip -d ~/.local/share/
 Press `Alt+F2` and enter `r` to restart GNOME Shell
 
 10. LAMP stack
+
 [DigitalOcean guide](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04)
+
 [phpMyAdmin](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04)
 
 ##### Automatically mount a partition
