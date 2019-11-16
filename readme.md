@@ -86,15 +86,6 @@ unzip /tmp/hide-dash@xenatt.github.com.v8.shell-extension.zip -d ~/.local/share/
 ```
 Press `Alt+F2` and enter `r` to restart GNOME Shell
 
-
-12. Dynamic panel transparency
-```sh
-cd /tmp
-git clone https://github.com/rockon999/dynamic-panel-transparency.git
-mv dynamic-panel-transparency/dynamic-panel-transparency@rockon999.github.io ~/.local/share/gnome-shell/extensions/
-```
-Reload your shell using Alt+F2 r Enter and enable the extension via `gnome-tweak-tool` or `dconf`.
-
 ##### Automatically mount a partition
 ```sh
 sudo blkid # get partitions's UUID
@@ -128,3 +119,13 @@ gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 code /usr/share/gnome-shell/theme/ubuntu.css
 ```
 Find `lockDialogGroup` and replace whatever you want. Restart computer for applying change.
+
+##### Make top bar transparent
+Use a theme, change its css:
+```css
+#panel,
+#panel.solid {
+  ...
+  background-color: transparent;
+}
+```
