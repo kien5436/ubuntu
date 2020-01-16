@@ -3,7 +3,7 @@
 ##### Uninstall
 ```
 sudo apt purge --remove -y aisleriot gnome-sudoku gnome-mahjongg ace-of-penguins gnome-mines gbrainy cheese thunderbird
-# remove amazon
+# remove amazon libreoffice*
 sudo rm /usr/share/applications/ubuntu-amazon-default.desktop /usr/share/unity-webapps/userscripts/unity-webapps-amazon/Amazon.user.js /usr/share/unity-webapps/userscripts/unity-webapps-amazon/manifest.json
 ```
 
@@ -85,6 +85,17 @@ wget https://extensions.gnome.org/extension-data/hide-dash%40xenatt.github.com.v
 unzip /tmp/hide-dash@xenatt.github.com.v8.shell-extension.zip -d ~/.local/share/gnome-shell/extensions/hide-dash@xenatt.github.com # directory name is the uuid in metadata.json file
 ```
 Press `Alt+F2` and enter `r` to restart GNOME Shell
+
+12. Android Studio
+```sh
+sudo snap install android-studio --classic
+```
+
+13. WPS Office
+```sh
+# download .deb package from https://linux.wps.com
+sudo dpkg -i wps-office*.deb
+```
 
 ##### Automatically mount a partition
 ```sh
