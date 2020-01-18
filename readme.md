@@ -1,9 +1,14 @@
-## Some setup for new ubuntu
+# Some setup for new ubuntu
+
+- [Uninstall](#uninstall)
+- [Install](#install)
+- [Automatically mount a partition](#automatically-mount-a-partition)
+- [Tweaks](#dock)
 
 ##### Uninstall
 ```
-sudo apt purge --remove -y aisleriot gnome-sudoku gnome-mahjongg ace-of-penguins gnome-mines gbrainy cheese thunderbird
-# remove amazon libreoffice*
+sudo apt purge -y aisleriot gnome-sudoku gnome-mahjongg ace-of-penguins gnome-mines gbrainy cheese thunderbird libreoffice* gedit
+# remove amazon
 sudo rm /usr/share/applications/ubuntu-amazon-default.desktop /usr/share/unity-webapps/userscripts/unity-webapps-amazon/Amazon.user.js /usr/share/unity-webapps/userscripts/unity-webapps-amazon/manifest.json
 ```
 
@@ -140,3 +145,6 @@ Use a theme, change its css:
   background-color: transparent;
 }
 ```
+
+#### Hide long path in terminal
+Find `if [ "$color_prompt" = yes ]; then` in `~/.bashrc` and change `\w` to `\W`
