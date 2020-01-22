@@ -14,14 +14,14 @@ decoration {
 
    // lamefun trick to get rounded borders regardless of CSD use
    border-width: 0px;
-   
+
      box-shadow: 0 2px 4px 2px transparentize(black, 0.8);
-   
+
      // FIXME rationalize shadows
-   
+
      // this is used for the resize cursor area
      margin: 10px;
-   
+
      &:backdrop {
        // the transparent shadow here is to enforce that the shadow extents don't
        // change when we go to backdrop, to prevent jumping windows.
@@ -70,10 +70,10 @@ decoration {
 button.titlebutton {
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 32px;
-  padding: 0 3px;
+  min-height: 20px;
+  padding: 0 1px;
   box-shadow: none;
-  
+
   &.close {
     background-image: -gtk-scaled(url("../assets/close.png"),url("../assets/close@2.png"));
     &:hover,&:active {
@@ -94,8 +94,8 @@ button.titlebutton {
   }
 
   &.close, &.minimize, &.maximize {
-    &:backdrop { 
-      background-image: -gtk-scaled(url("../assets/close_unfocused.png"),url("../assets/close_unfocused@2.png"));    
+    &:backdrop {
+      background-image: -gtk-scaled(url("../assets/close_unfocused.png"),url("../assets/close_unfocused@2.png"));
     }
   }
 
@@ -105,8 +105,8 @@ button.titlebutton {
     @extend %nobg_selected_items;
   }
 
-  &:backdrop { 
-    -gtk-icon-shadow: none;    
+  &:backdrop {
+    -gtk-icon-shadow: none;
   }
 }
 
@@ -126,7 +126,7 @@ headerbar.selection-mode button.titlebutton,
   @at-root %nobg_selected_items, & {
     color: $selected_fg_color;
     font-weight: bold;
-    
+
     @if $variant == 'light' { outline-color: transparentize($selected_fg_color, 0.7); }
 
     &:disabled { color: mix($selected_fg_color, $selected_bg_color, 50%); }

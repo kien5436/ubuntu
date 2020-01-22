@@ -12,7 +12,7 @@ $cyan: #8be9fd;
 $lime: #50fa7a;
 
 $selected_fg_color: $fg_color;
-$selected_bg_color: #ff79c6;
+$selected_bg_color: $red;
 $selected_borders_color: darken($selected_bg_color, 10%);
 $borders_color: transparentize(#191A22, 0.1);
 $borders_edge: transparentize(white, 0.9);
@@ -25,7 +25,7 @@ $bottom_highlight: transparentize(black, 0.9);
 $warning_color: darken(#ffb86c,10%);
 $error_color: darken( $red,5%);
 $success_color: darken($cyan,10%);
-$destructive_color: darken( #c72240,10%);
+$destructive_color: darken(#c72240,10%);
 
 $osd_fg_color: #fefefe;
 $osd_bg_color: transparentize($bg_color, 0.05);

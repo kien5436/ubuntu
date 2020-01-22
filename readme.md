@@ -1,4 +1,4 @@
-# Some setup for new ubuntu
+# Some setup for new ubuntu (GNOME)
 
 - [Uninstall](#uninstall)
 - [Install](#install)
@@ -132,12 +132,12 @@ gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 
 ##### Change login background
 ```sh
-code /usr/share/gnome-shell/theme/ubuntu.css
+subl /usr/share/gnome-shell/theme/ubuntu.css
 ```
 Find `lockDialogGroup` and replace whatever you want. Restart computer for applying change.
 
 ##### Make top bar transparent
-Use a theme, change its css:
+Change css in `/usr/share/gnome-shell/theme/ubuntu.css` or `/usr/share/themes/<themes name>/gnome-shell/gnome-shell.css`:
 ```css
 #panel,
 #panel.solid {
@@ -148,3 +148,18 @@ Use a theme, change its css:
 
 #### Hide long path in terminal
 Find `if [ "$color_prompt" = yes ]; then` in `~/.bashrc` and change `\w` to `\W`
+
+#### Backup and restore terminal profile
+```sh
+# profiles list
+dconf dump /org/gnome/terminal/legacy/profiles:/ | grep -e "\[\:\|visible-name"
+# backup
+dconf dump /org/gnome/terminal/legacy/profiles:/<profile id>/ > <profile name>.dconf
+# restore
+dconf load /org/gnome/terminal/legacy/profiles:/<profile id>/ < <profile name>.dconf
+# apply changes
+dconf write /org/gnome/terminal/legacy/profiles:/default "'<profile id>'"
+dconf write /org/gnome/terminal/legacy/profiles:/list "['<profile id>']"
+# delete
+dconf reset -f /org/gnome/terminal/legacy/profiles:/<profile id>/
+```
