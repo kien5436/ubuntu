@@ -102,6 +102,15 @@ sudo snap install android-studio --classic
 sudo dpkg -i wps-office*.deb
 ```
 
+14. Firefox dev
+```sh
+cd ~/Downloads
+curl -Lo firefox.tar.bz2 'https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=en-US'
+# find install location, usually in /usr/lib/firefox
+which firefox
+sudo tar -xvf firefox.tar.bz2 -C /usr/lib 
+```
+
 ##### Automatically mount a partition
 ```sh
 sudo blkid # get partitions's UUID
