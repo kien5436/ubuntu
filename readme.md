@@ -109,6 +109,17 @@ curl -Lo firefox.tar.bz2 'https://download.mozilla.org/?product=firefox-devediti
 # find install location, usually in /usr/lib/firefox
 which firefox
 sudo tar -xvf firefox.tar.bz2 -C /usr/lib 
+cat > ~/.local/share/applications/firefox.desktop <<EOL
+[Desktop Entry]
+Encoding=UTF-8
+Name=Firefox
+Exec=/usr/lib/firefox/firefox-bin
+Icon=/usr/lib/firefox/browser/chrome/icons/default/default128.png
+Terminal=false
+Type=Application
+Categories=Application
+StartupWMClass=Firefox Developer Edition
+EOL
 ```
 
 ##### Automatically mount a partition
