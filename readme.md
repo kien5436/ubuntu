@@ -113,7 +113,7 @@ sudo tar -xvf firefox.tar.bz2 -C /opt
 # grant read-write permission for updating
 sudo chown -R $USER:$USER /opt/firefox
 # create symbolic link so you can use `firefox` anywhere
-ln -s /usr/lib/firefox/firefox-bin /usr/bin/firefox
+ln -s /opt/firefox/firefox-bin /usr/bin/firefox
 # create quick launch icon
 cat > ~/.local/share/applications/firefox.desktop <<EOL
 [Desktop Entry]
