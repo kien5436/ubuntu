@@ -104,17 +104,23 @@ sudo dpkg -i wps-office*.deb
 
 14. Firefox dev
 ```sh
+# first, uninstall the default firefox
+sudo apt purge firefox
+# download the latest version
 cd ~/Downloads
 curl -Lo firefox.tar.bz2 'https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=en-US'
-# find install location, usually in /usr/lib/firefox
-which firefox
-sudo tar -xvf firefox.tar.bz2 -C /usr/lib 
+sudo tar -xvf firefox.tar.bz2 -C /opt
+# grant read-write permission for updating
+sudo chown -R $USER:$USER /opt/firefox
+# create symbolic link so you can use `firefox` anywhere
+ln -s /usr/lib/firefox/firefox-bin /usr/bin/firefox
+# create quick launch icon
 cat > ~/.local/share/applications/firefox.desktop <<EOL
 [Desktop Entry]
 Encoding=UTF-8
 Name=Firefox
-Exec=/usr/lib/firefox/firefox-bin
-Icon=/usr/lib/firefox/browser/chrome/icons/default/default128.png
+Exec=/opt/firefox/firefox-bin
+Icon=/opt/firefox/browser/chrome/icons/default/default128.png
 Terminal=false
 Type=Application
 Categories=Application
