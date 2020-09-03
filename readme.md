@@ -26,7 +26,7 @@ sudo apt install -y curl
 3. Node.js
 - [NodeSource](https://github.com/nodesource/distributions/blob/master/README.md#debmanual)
 ```sh
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 - Or go to [download page](https://nodejs.org/en/download/) then [follow 2 first steps](https://github.com/nodejs/help/wiki/Installation)
@@ -119,13 +119,20 @@ cat > ~/.local/share/applications/firefox.desktop <<EOL
 [Desktop Entry]
 Encoding=UTF-8
 Name=Firefox
-Exec=/opt/firefox/firefox-bin
+Exec=/opt/firefox/firefox-bin %u
 Icon=/opt/firefox/browser/chrome/icons/default/default128.png
 Terminal=false
 Type=Application
 Categories=Application
 StartupWMClass=Firefox Developer Edition
 EOL
+```
+15. Ibus bamboo
+```sh
+sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
+sudo apt-get update
+sudo apt-get install -y ibus-bamboo
+ibus restart
 ```
 
 ##### Automatically mount a partition
