@@ -32,17 +32,12 @@ sudo apt-get install -y nodejs
 - Or go to [download page](https://nodejs.org/en/download/) then [follow 2 first steps](https://github.com/nodejs/help/wiki/Installation)
 
 4. vscode
+
+Use `vscodium` instead https://github.com/VSCodium/vscodium
 ```sh
 sudo snap install --classic code
 ```
 Follow this page if failed: [https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
-
-5. fcitx-unikey
-```sh
-sudo apt-get install -y fcitx-unikey
-im-config -n fcitx
-```
-Restart computer to fcitx work. Add unikey into config and double click on it to choose kinds of typing
 
 6. Google Chrome
 ```sh
