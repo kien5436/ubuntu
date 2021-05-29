@@ -80,7 +80,9 @@ sudo apt install -y gnome-shell-extensions
 ```
 
 11.1 Dash to dock
+
 https://micheleg.github.io/dash-to-dock/download.html
+
 11.2 Hide dash X: Hide the ugly dash of built-in gnome
 ```sh
 wget https://extensions.gnome.org/extension-data/hide-dash%40xenatt.github.com.v8.shell-extension.zip -P /tmp/
