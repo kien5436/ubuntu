@@ -79,7 +79,9 @@ sudo apt install -y gnome-tweaks
 sudo apt install -y gnome-shell-extensions
 ```
 
-11. Hide dash X: Hide the ugly dash of built-in gnome
+11.1 Dash to dock
+https://micheleg.github.io/dash-to-dock/download.html
+11.2 Hide dash X: Hide the ugly dash of built-in gnome
 ```sh
 wget https://extensions.gnome.org/extension-data/hide-dash%40xenatt.github.com.v8.shell-extension.zip -P /tmp/
 unzip /tmp/hide-dash@xenatt.github.com.v8.shell-extension.zip -d ~/.local/share/gnome-shell/extensions/hide-dash@xenatt.github.com # directory name is the uuid in metadata.json file
