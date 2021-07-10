@@ -92,6 +92,10 @@ unzip /tmp/hide-dash@xenatt.github.com.v8.shell-extension.zip -d ~/.local/share/
 ```
 Press `Alt+F2` and enter `r` to restart GNOME Shell
 
+11.3 Deskchanger
+
+https://extensions.gnome.org/extension/1131/desk-changer/
+
 12. Android Studio
 ```sh
 sudo snap install android-studio --classic
