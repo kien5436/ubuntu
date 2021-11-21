@@ -140,6 +140,22 @@ sudo apt-get install -y ibus-bamboo
 ibus restart
 ```
 
+16.1. Fluent icon
+
+```sh
+git clone https://github.com/vinceliuice/Fluent-icon-theme
+cd Fluent-icon-theme
+./install red -b
+```
+
+16.2. Fluent theme
+
+```sh
+git clone https://github.com/vinceliuice/Fluent-gtk-theme
+cd Fluent-gtk-theme
+./install.sh -t red -c dark -s standard -i popos --tweaks noborder
+```
+
 ##### Automatically mount a partition
 ```sh
 sudo blkid # get partitions's UUID
@@ -151,22 +167,6 @@ Paste the following line and replace the `UUID` and `mount point` you want:
 UUID=<uuid> /mnt/<uuid or dir_name> ntfs-3g async,auto,exec,nouser,rw,nosuid,nodev,nofail 0 0
 ```
 Use `nautilus` to bookmarks this location for easy access
-
-##### Dock
-```sh
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
-gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
-gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
-
-# optional
-# gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
-## transparency
-# gsettings set org.gnome.shell.extensions.dash-to-dock customize-alphas true
-# gsettings set org.gnome.shell.extensions.dash-to-dock min-alpha 0
-# gsettings set org.gnome.shell.extensions.dash-to-dock max-alpha 0
-
-```
 
 ##### Change login background
 ```sh
