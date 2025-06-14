@@ -1,0 +1,39 @@
+# Bash scripts
+*.sh text eol=lf diff=sh
+
+# Git-ignored but tracked backup preferences (optional adjust)
+preferences/** text diff
+
+# Common config files
+*.json text diff
+*.yml text diff
+*.yaml text diff
+*.conf text diff
+*.ini text diff
+
+# Fonts or binary blobs (if any in preferences)
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# Prevent linguist from classifying as code
+preferences/** linguist-vendored
+
+# Mark lock files as merge=union (if package managers involved later)
+*.lock merge=union
+
+# Shell aliases or environment files
+.env text
+*.zshrc text eol=lf
+*.bashrc text eol=lf
+*.p10k.zsh text eol=lf
+
+# Prevent accidental diffing of large binaries
+*.tar binary
+*.gz binary
+*.zip binary
+
+# Misc
+*.md text diff=markdown
+
